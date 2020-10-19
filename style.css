@@ -1,0 +1,80 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Nunito',
+    sans-serif;
+    background-color: #17A589;
+    font-weight: 300;
+    color: #2b2b2b;
+}
+
+header{
+    text-align: center;
+    padding: 30px 0;
+}
+header h1{
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 36px;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.wrapper{
+    background-color: #31b89d; 
+}
+
+/* ACCORDION */
+
+.accordion{
+    background-color: white;
+}
+.accordion-item{
+
+}
+
+.accordion-heading{
+    background-color: #e0e0e0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    transition: background-color .3s ease-in;
+}
+.accordion-heading span {
+    padding: 10px;
+}
+.accordion-heading span i {
+    transition: transform .3s ease-in;
+}
+.accordion-heading h3{
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+.accordion-content{
+    overflow: hidden;
+    height: 0;
+    transition: height .3s ease-in;
+}
+
+.accordion-active .accordion-heading {
+    background-color: #a0a0a0;
+}
+
+.accordion-active .accordion-heading span i {
+    transform: rotate(225deg);
+}
+.accordion-active .accordion-content{
+    height: 100%;
+}

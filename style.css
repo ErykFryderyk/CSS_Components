@@ -152,4 +152,25 @@ header h1{
     transition: transform .3s ease;
 }
 
-/* Button #2 */
+/* Button #3 */
+.btn-3{
+    background:transparent;
+    position: relative;
+}
+
+.btn-3::after{
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 10%;
+    background-color:black;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    transition: all .3s ease;
+}
+
+.btn-3:hover::after{
+    width: 100%;
+    background-color: green;
+}

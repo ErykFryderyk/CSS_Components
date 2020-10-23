@@ -71,7 +71,7 @@ header h1{
     transform: rotate(225deg);
 }
 .accordion-active .accordion-content{
-    max-height: 20em;
+    max-height: 1000px;
 }
 
 /* BUTTONS */
@@ -273,3 +273,83 @@ header h1{
 }
 
 
+/* LOADING BUTTONS  */
+
+
+.loading-btn{
+    padding: 20px 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border:0;
+    background: transparent;
+    position: relative;
+    margin: 20px;
+    transition: all .25s ease;
+    background: rgba(116, 23, 231, 1);
+    border-radius: 28px;
+    color: #fff;
+    overflow: hidden;
+    outline: none;
+}
+
+.loading-btn:active{
+    transform: scale(.85);
+}
+
+.loading-btn.active-loading .loading {
+    visibility: visible;
+    opacity: 1;
+}
+.loading-btn .loading{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading-1{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: inherit;
+
+}
+
+.loading-1::after{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    width: 30px;
+    height: 30px;
+    border-left: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    animation: loading1 1s ease infinite;
+}
+.loading-1::before{
+    z-index: 5;
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    width: 30%;
+    height: 30px;
+    border-left: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    animation: loading 1s linear infinite;
+}
+
+
+@keyframes loading1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

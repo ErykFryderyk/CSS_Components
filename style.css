@@ -335,12 +335,12 @@ header h1{
     content: '';
     position: absolute;
     border-radius: 50%;
-    border: 3px solid #fff;
-    width: 30%;
+    border: 3px dashed #fff;
+    width: 30px;
     height: 30px;
     border-left: 3px solid transparent;
     border-bottom: 3px solid transparent;
-    animation: loading 1s linear infinite;
+    animation: loading1 1s linear infinite;
 }
 
 

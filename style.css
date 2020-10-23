@@ -447,4 +447,45 @@ header h1{
     }
 }
 
-/* #3 Loading Button */
+/* #4 Loading Button */
+
+.loading-4 {
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(116, 23, 231, .8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: inherit;
+    overflow: hidden;
+}
+
+.loading-4::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    animation: loading4 1s ease infinite;
+    z-index: 10;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+}
+
+@keyframes loading4 {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    100% {
+        width: 100%;
+        opacity: 0;
+    }
+}

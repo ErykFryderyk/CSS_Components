@@ -520,3 +520,28 @@ header h1{
     white-space: nowrap;
 }
 
+/* Form Section  */
+
+.box-of-form-elements{
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-box{
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+}
+.form-box input {
+    height: 50px;
+    font-size: 22px;
+    border: none;
+    border-radius: 25px;
+    padding-left: 15px;
+}
+
+.form-box #myCheckBox{
+    height: 50px;
+    width: 50px;
+}
+
+

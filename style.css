@@ -275,6 +275,12 @@ header h1{
 
 /* LOADING BUTTONS  */
 
+.loading-buttons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 
 .loading-btn{
     padding: 20px 50px;
@@ -491,7 +497,12 @@ header h1{
 }
 
 
-/* #4 Loading Button */
+/* Counter Animation */
+.counter-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 .counter-container{
     text-align: center;
@@ -501,9 +512,11 @@ header h1{
     display: block;
     margin-bottom: 20px;
     font-size: 80px;
-    color:#6a097d
+    color:#6a097d;
+    margin: 0px 50px;
 }
 .count-detail{
     font-size: 25px;
     white-space: nowrap;
 }
+

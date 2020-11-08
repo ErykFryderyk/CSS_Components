@@ -66,7 +66,7 @@ function myFunction() {
     // console.log(content.scrollHeight);
     const height = content.scrollHeight - content.clientHeight;
     const scrolled = (contentScroll / height) * 100;
-    console.log(scrolled);
+    // console.log(scrolled);
     // console.log(contentScroll);
     // console.log(height);
     document.querySelector('.progress-bar').style.width = scrolled + '%';
@@ -85,7 +85,7 @@ const text = document.querySelector('.text-hero');
 
 const parallax = () => { 
     const value = window.scrollY;
-    console.log(value);
+    // console.log(value);
 
     backgroundImage.style.top = value * 0.5 + 'px';
     moonImage.style.left = value * 0.5 + 'px';
@@ -95,3 +95,21 @@ const parallax = () => {
 }
 
 window.addEventListener('scroll', parallax)
+
+
+
+// MOVE MOUSE BACKGROUND EFFECT
+
+document.addEventListener('mousemove', moveEffect);
+function moveEffect(e){
+
+    this.querySelectorAll('.layer').forEach(layer => {
+        const speed = layer.getAttribute('data-speed')
+
+        const x = (window.innerWidth - e.pageX * speed) /50;
+        const y = (window.innerHeight - e.pageY * speed) /50;
+        
+
+        layer.style.transform = `translate(${x}px, ${y}px)`;
+    })
+}

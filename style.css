@@ -672,10 +672,6 @@ section img {
     object-fit: cover;
 }
 
-section .moon, .mountain, .road{
-    transition: all .5s ease;
-}
-
 .text-hero{
     position: relative;
     color: #fff;
@@ -685,4 +681,31 @@ section .moon, .mountain, .road{
 
 section .road {
     z-index: 2;
+}
+
+
+/* Move Mouse Background Effect */
+.move-mouse-background-effect{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.move-mouse-image{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    width: 100%;
+    /* object-fit: cover; */
+}
+
+.title{
+    position: absolute;
+    color: #fff;
+    font-size: 7em;
 }

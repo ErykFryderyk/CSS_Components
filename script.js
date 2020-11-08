@@ -71,3 +71,27 @@ function myFunction() {
     // console.log(height);
     document.querySelector('.progress-bar').style.width = scrolled + '%';
 }
+
+
+
+// Parallax Hero Section 
+
+const backgroundImage = document.querySelector('.background');
+const moonImage = document.querySelector('.moon');
+const mountainImage = document.querySelector('.mountain');
+const roadImage = document.querySelector('.road');
+const text = document.querySelector('.text-hero');
+
+
+const parallax = () => { 
+    const value = window.scrollY;
+    console.log(value);
+
+    backgroundImage.style.top = value * 0.5 + 'px';
+    moonImage.style.left = value * 0.5 + 'px';
+    mountainImage.style.top = -value * 0.15 + 'px';
+    roadImage.style.top = value * 0.15 + 'px';
+    text.style.top = value * 0.5 + 'px';
+}
+
+window.addEventListener('scroll', parallax)

@@ -110,7 +110,6 @@ const generatePassword = (length = 16) => {
         let at = Math.floor(Math.random() * (charset.length + 1));
         password += charset.charAt(at);
     }
-
     return password 
 } 
 

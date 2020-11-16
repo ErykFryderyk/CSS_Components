@@ -40,6 +40,9 @@ header h1{
     flex-wrap: wrap;
 }
 
+
+@media (min-width: )
+
 /* ACCORDION */
 
 .accordion{
@@ -86,11 +89,26 @@ header h1{
     display: flex;
     justify-content: center;
     min-width: 20%; 
-    height: 300px;  
+    height: 200px;  
     align-items: center;
 }
 .box-element:nth-child(2n){
-    background-color: #276194;
+    background-color: #0c1549;
+}
+.box-element:first-child{
+    background-color:#C70039;
+}
+.box-element:nth-child(3){
+    background-color: #f37121;
+}
+.box-element:nth-child(5){
+    background-color: #ffbd69;
+}
+.box-element:nth-child(7){
+    background-color: #5c6e91;
+}
+.box-element:nth-child(9){
+    background-color: #ec5858;
 }
 
 .btn{
@@ -106,8 +124,8 @@ header h1{
 }
 
 .btn-1 {
-    background: #491616;
-    color: #fff;
+    background: #fff;
+    color: #000;
     border-radius: 30px;
     transition: all .25s ease;
 }
@@ -117,7 +135,7 @@ header h1{
     content: '';
     position: absolute;
     opacity: .3;
-    background: #491616;
+    background: #fff;
     border-radius: inherit;
     width: 100%;
     height: 100%;
@@ -142,17 +160,12 @@ header h1{
 /* Button #2 */
 .btn-2{
     position: relative;
-}
-.btn-2:hover::after{
-    transform: translate(-5px, -5px);
-}
-.btn-2:hover::before{
-    transform: translate(5px, 5px);
+    color: #fff;
 }
 .btn-2::before, .btn-2::after{
     content: '';
     position: absolute;
-    border: 1px solid black;
+    border: 1px solid #fff;
     border-radius: inherit;
     width: calc(100% - 6px);
     height: calc(100% - 6px);
@@ -161,12 +174,20 @@ header h1{
     z-index: 1;
     transition: transform .3s ease;
 }
+.btn-2:hover::after{
+    transform: translate(-5px, -5px);
+}
+.btn-2:hover::before{
+    transform: translate(5px, 5px);
+}
 
 /* Button #3 */
 .btn-3{
     background:transparent;
     position: relative;
-    border: 1px solid black;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: color .3s ease;
 }
 
 .btn-3::after{
@@ -174,11 +195,15 @@ header h1{
     position: absolute;
     height: 5px;
     width: 10%;
-    background-color:black;
+    background-color: #fff;
     bottom: 0;
     left: 50%;
     transform: translate(-50%);
     transition: all .3s ease;
+}
+
+.btn-3:hover{
+    color: green;
 }
 
 .btn-3:hover::after{
@@ -192,7 +217,7 @@ header h1{
     color: #fff;
     border-radius: 30px;
     box-shadow: 0px 0px 0px 0px rgba(143, 64, 248, .5), 0px 0px 0px 0px rgba(39, 200, 255, .5);
-    border: 1px solid #000;
+    border: 1px solid #fff;
 }
 
 .btn-4:hover{
@@ -247,7 +272,7 @@ header h1{
 
 /* Button #6 */
 .btn-6 {
-    border: 3px solid #000;
+    border: 3px solid #fff;
     width: 150px;
     height: 50px;
     font-size: 20px;
@@ -266,7 +291,7 @@ header h1{
 }
 .btn-6 .effect {
     position: absolute;
-    background: #000;
+    background: green;
     left: 0px;
     top: 0px;
     width: 100%;

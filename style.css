@@ -33,6 +33,10 @@ header h1{
 }
 .wrapper{
     background-color: #31b89d; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 /* ACCORDION */
@@ -77,11 +81,15 @@ header h1{
 
 /* BUTTONS */
 
-.hover-buttons{
+.box-element{
     display: flex;
     justify-content: center;
+    min-width: 20%; 
+    height: 300px;  
     align-items: center;
-    flex-wrap: wrap;
+}
+.box-element:nth-child(2n){
+    background-color: #276194;
 }
 
 .btn{
@@ -157,6 +165,7 @@ header h1{
 .btn-3{
     background:transparent;
     position: relative;
+    border: 1px solid black;
 }
 
 .btn-3::after{
@@ -182,11 +191,13 @@ header h1{
     color: #fff;
     border-radius: 30px;
     box-shadow: 0px 0px 0px 0px rgba(143, 64, 248, .5), 0px 0px 0px 0px rgba(39, 200, 255, .5);
+    border: 1px solid #000;
 }
 
 .btn-4:hover{
     transform: translate(0, -0px);
     box-shadow: 10px -10px 25px 0px rgba(143, 64, 248, .25), -10px 10px 25px 0 rgba(39, 200, 255, .25);
+    border: 0px;
 }
 .btn-4::after {
     content: '';
@@ -206,6 +217,8 @@ header h1{
 /* Button #5 */
 .btn-5{
     /* background-color: transparent; */
+    border: 1px solid #000;
+    border-radius: 50px;
 }
 .btn-5:hover{
     color: #fff;
@@ -292,7 +305,7 @@ header h1{
     position: relative;
     margin: 20px;
     transition: all .25s ease;
-    background: rgba(116, 23, 231, 1);
+    background: rgb(139, 59, 236);
     border-radius: 28px;
     color: #fff;
     overflow: hidden;
@@ -553,7 +566,6 @@ input:checked{
     transition: all .4s ease-in;
 
 }
-
 /* Counter Animation */
 
 .counter-box{
@@ -666,8 +678,6 @@ label input:placeholder-shown + p{
     opacity: .6;
 }
 
-
-
 /* SCROLL INDICATOR  */
 
 .header{
@@ -738,14 +748,15 @@ section img {
 
 .text-hero{
     position: relative;
-    color: #fff;
-    font-size: 7em;
-    z-index: 1;
+    color: rgb(255, 255, 255);
+    font-size: 5em;
+    z-index: 5;
 }
 
 section .road {
     z-index: 2;
 }
+
 
 
 /* Move Mouse Background Effect */

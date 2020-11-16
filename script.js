@@ -135,3 +135,5 @@ function moveEffect(e){
         layer.style.transform = `translate(${x}px, ${y}px)`;
     })
 }
+
+/* Scrolling vertical elements move effect */

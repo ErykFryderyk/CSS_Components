@@ -30,6 +30,7 @@ header h1{
     padding: 0 20px;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 20px;
 }
 .wrapper{
     background-color: #31b89d; 
@@ -572,6 +573,7 @@ input:checked{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 50px 0;
 }
 
 .counter-container{
@@ -619,6 +621,7 @@ input:checked{
 
 .password-box{
     position: relative;
+
 }
 
 .password-box input {
@@ -630,6 +633,7 @@ input:checked{
     border-radius: 0.2rem;
     border: 2px solid #7a7a7a56;
     transition: border-color 0.2s;
+    margin-top: 20px;
 }
 
 label input::selection{
@@ -679,7 +683,12 @@ label input:placeholder-shown + p{
 }
 
 /* SCROLL INDICATOR  */
-
+.scroll-indicator-box{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 .header{
 width: 50%;
 background-color: #545454;
@@ -699,7 +708,7 @@ background-color: #545454;
 
 .content{
     width: 50%;
-    height: 100px;
+    height: 200px;
     overflow: auto;
 }
 

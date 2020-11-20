@@ -699,8 +699,60 @@ header h1{
     opacity: 1;
     background-color: #fff;
     box-shadow: 0px 0px 10px 0px #000;
+}
 
+/* =============== */
+/* =============== */
+/* CHECKBOX 3 */
 
+.checkbox-3 {
+    height: 50px;
+    width: 50px;
+    border: 10px;
+    -webkit-appearance: none;
+    background-color: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.checkbox-3::before{
+    content:'';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    top: 50%;
+    left:43%;
+    transform: rotate(-50deg);
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.checkbox-3::after{
+    content:'';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: black;
+    top:60%;
+    left:37%;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: all 0.3s;
+}
+.checkbox-3:hover{
+    box-shadow:0px 0px 10px 0px #000;
+}
+.checkbox-3:hover.checkbox-3::before,
+.checkbox-3:hover.checkbox-3::after {
+    opacity: .5;
+}
+
+.checkbox-3:checked::after,
+.checkbox-3:checked::before{
+    opacity: 1;
 }
 
 

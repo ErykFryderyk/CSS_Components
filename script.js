@@ -17,6 +17,32 @@ btns.forEach(item =>{
 })
 
 
+//------------------------
+//-----HOVER BUTTON #7
+//------------------------
+
+const btn7 = document.querySelector('.btn-7');
+
+btn7.addEventListener('click', function(e) {
+    console.log(e.target.offsetLeft);
+    console.log(e.target.offsetTop);
+    console.log(e.clientY);
+    console.log(e.clientX);
+
+    const x = e.clientX - e.target.offsetLeft;
+    const y = e.clientY - e.target.offsetTop;
+    let ripples = document.createElement('span'); 
+
+    ripples.style.left = `${x}px`;
+    ripples.style.top = `${y}px`;
+    this.appendChild(ripples);
+
+    setTimeout(() => {
+        ripples.remove()
+    }, 6000);
+})
+
+
 //Counter Animation 
 
 const counts = document.querySelectorAll('.count');

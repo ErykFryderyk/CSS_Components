@@ -331,70 +331,46 @@ header h1{
 
 
 /* ------------------- */
-/* BUTTON #7 */
+/* HOVER BUTTON #7 */
 /* ------------------- */
 
 .btn-7{
-    --width: 100%;
-    --time: 0.7s;
     position: relative;
     display: inline-block;
-    height:1em;
-    padding:1em;
-    border-radius: 8px;
-    color: white;
-    background: #0f117a;
-    overflow: hidden;
+    /* padding: 15px 40px; */
+    height: 50px;
+    width: 180px;
+    color:black;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 500;
+    border: none;
+    letter-spacing: 1px;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #0162c8, #55e7fc);
+    outline: none;
+    /* overflow: hidden; */
 }
 
-.btn-7--flash{
-    position: relative;
-    z-index: 5;
-    font-size: 16px;
-    font-weight: bold;
-    transition: color var(--time);
-}
-
-.btn-7 span{
+.btn-7 span {
     position: absolute;
-    display: block;
-    content:'';
-    z-index: 0;
-    width: 0;
-    height: 0;
-    border-radius: 100%;
     background: #fff;
     transform: translate(-50%, -50%);
-    transition: width var(--time), padding-top var (--time);
+    pointer-events: none;
+    border-radius: 50px;
+    animation: ripples-animate 6s linear;
+    opacity: .3;
 }
 
-.btn-7:hover span{
-    width: calc(var(--width) * 2.25);
-    padding-top: calc(var(--width) * 2.25);
-}
-.btn-7--flash:hover text{
-    color: white;
-}
-
-.btn-7--flash span{
-    background: #fc5185;
-}
-
-.animated {
-    --angle: 5deg;
-    animation: shake 0.3s
-}
-
-
-@keyframes shake {
-    25%{
-        transform: rotate(calc(var(--angle)* -1));
-    }
-    50%{
-        transform: rotate(var(--angle));
+@keyframes ripples-animate{
+    0%{
+        width: 0px;
+        height: 0px;
     }
     100%{
-        transform: rotate(0deg);
+        width: 5000px;    
+        height: 5000px;
+        opacity: 0;
     }
 }
 

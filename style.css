@@ -140,6 +140,94 @@ header h1{
     margin: 20px;
 }
 
+/* ------------------- */
+/* BUTTONS CLICK EFFECT*/
+/* ------------------- */
+
+/* ------------------- */
+/* BUTTON 1*/
+/* ------------------- */
+
+.btn-click-1{
+    width: 180px;
+    height: 50px;
+    background: linear-gradient(90deg, #2d84e2, #55e7fc);
+    font-size: 20px;
+    border: none;
+    letter-spacing: 1px;
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    border-radius: 15px;
+}
+.btn-click-1 > span {
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+    height: 500px;
+    width: 500px;
+    animation: ripples 1s linear infinite;
+}
+
+@keyframes ripples {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: .5;
+    }
+
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
+
+
+/* .btn-7{
+    position: relative;
+    height: 50px;
+    width: 180px;
+    color:black;
+    text-decoration: none;
+    font-size: 22px;
+    display: block;
+    font-weight: 500;
+    border: none;
+    letter-spacing: 1px;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #0162c8, #55e7fc);
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn-7 > span { 
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    pointer-events: none;
+    height: 500px;
+    width: 500px;
+    animation: ripples 1s linear infinite;
+}
+
+@keyframes ripples{
+    0%{
+        width: 0px;
+        height: 0px;
+        opacity: .5;
+    }
+    100%{
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+} */
 .btn-1 {
     background: #fff;
     color: #000;
@@ -334,45 +422,8 @@ header h1{
 /* HOVER BUTTON #7 */
 /* ------------------- */
 
-.btn-7{
-    position: relative;
-    display: inline-block;
-    /* padding: 15px 40px; */
-    height: 50px;
-    width: 180px;
-    color:black;
-    text-decoration: none;
-    font-size: 22px;
-    font-weight: 500;
-    border: none;
-    letter-spacing: 1px;
-    border-radius: 25px;
-    background: linear-gradient(90deg, #0162c8, #55e7fc);
-    outline: none;
-    /* overflow: hidden; */
-}
 
-.btn-7 span {
-    position: absolute;
-    background: #fff;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    border-radius: 50px;
-    animation: ripples-animate 6s linear;
-    opacity: .3;
-}
 
-@keyframes ripples-animate{
-    0%{
-        width: 0px;
-        height: 0px;
-    }
-    100%{
-        width: 5000px;    
-        height: 5000px;
-        opacity: 0;
-    }
-}
 
 
 /* LOADING BUTTONS  */

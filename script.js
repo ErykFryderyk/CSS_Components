@@ -21,28 +21,23 @@ btns.forEach(item =>{
 //-----HOVER BUTTON #7
 //------------------------
 
-const btn7 = document.querySelector('.btn-7');
+const btn7 = document.querySelector('.btn-click-1');
 
-btn7.addEventListener('click', function(e) {
-    console.log(e.target.offsetLeft);
-    console.log(e.target.offsetTop);
-    console.log(e.clientY);
-    console.log(e.clientX);
+btn7.addEventListener('click', function(e){
+    console.log('click');
+    let x = e.clientX - e.target.offsetLeft;
+    let y = e.clientY - e.target.offsetTop;
+    const ripple = document.createElement('span');
 
-    const x = e.clientX - e.target.offsetLeft;
-    const y = e.clientY - e.target.offsetTop;
-    let ripples = document.createElement('span'); 
+    ripple.style.left = `${x}px`;
+    ripple.style.top = `${y}px`;
+    this.appendChild(ripple);
 
-    ripples.style.left = `${x}px`;
-    ripples.style.top = `${y}px`;
-    this.appendChild(ripples);
+    setTimeout(function(){
+        ripple.remove()
+    }, 600);
 
-    setTimeout(() => {
-        ripples.remove()
-    }, 6000);
-})
-
-
+});
 //Counter Animation 
 
 const counts = document.querySelectorAll('.count');

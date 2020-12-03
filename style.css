@@ -169,7 +169,7 @@ header h1{
     pointer-events: none;
     height: 500px;
     width: 500px;
-    animation: ripples 1s linear infinite;
+    animation: ripples .3s linear infinite;
 }
 
 @keyframes ripples {
@@ -417,15 +417,6 @@ header h1{
     transition: all .25s ease;
 }
 
-
-/* ------------------- */
-/* HOVER BUTTON #7 */
-/* ------------------- */
-
-
-
-
-
 /* LOADING BUTTONS  */
 
 .loading-buttons{
@@ -648,6 +639,65 @@ header h1{
         opacity: 0;
     }
 }
+
+/* ===================== */
+/*  LOADING ANIMATION    */
+/* ===================== */
+.loading-animation{
+    display: flex;
+    width: 80px;
+    flex-wrap:wrap;
+    animation: rotate 1.5s infinite linear;
+}
+
+.loading-animation span {
+    background-color: black;
+    width: 32px;
+    height: 32px;
+    margin: 4px;
+    animation: scale 1.5s infinite linear
+}
+
+.loading-animation span:nth-child(1){
+    background-color: red;
+    border-radius: 25px 25px 0 25px;
+    transform-origin: bottom right;
+}
+.loading-animation span:nth-child(2){
+    background-color: green;
+    border-radius: 25px 25px 25px 0;
+    transform-origin: bottom left;
+    animation-delay: 0.5s;
+
+
+}
+.loading-animation span:nth-child(3){
+    background-color: purple;
+    border-radius: 25px 0 25px 25px;
+    transform-origin: top right;
+    animation-delay: 1.5s;
+}
+.loading-animation span:nth-child(4){
+    background-color: #3d89d1;
+    border-radius: 0px 25px 25px 25px;
+    transform-origin: top left;
+    animation-delay: 1s;
+}
+
+@keyframes scale{
+    50%{
+        transform: scale(1.5);
+    }
+}
+@keyframes rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+} 
+
+
+
+
 /* ===================== */
 /*  checkbox Input  */
 /* ===================== */

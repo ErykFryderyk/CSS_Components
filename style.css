@@ -659,34 +659,34 @@ header h1{
 }
 
 .loading-animation span:nth-child(1){
-    background-color: red;
+    background-color: #dbc373;
     border-radius: 25px 25px 0 25px;
     transform-origin: bottom right;
 }
 .loading-animation span:nth-child(2){
-    background-color: green;
+    background-color: #5fac5f;
     border-radius: 25px 25px 25px 0;
     transform-origin: bottom left;
-    animation-delay: 0.5s;
+    animation-delay: .3s;
 
 
 }
 .loading-animation span:nth-child(3){
-    background-color: purple;
+    background-color: #792a79;
     border-radius: 25px 0 25px 25px;
     transform-origin: top right;
-    animation-delay: 1.5s;
+    animation-delay: .9s;
 }
 .loading-animation span:nth-child(4){
     background-color: #3d89d1;
     border-radius: 0px 25px 25px 25px;
     transform-origin: top left;
-    animation-delay: 1s;
+    animation-delay: .6s;
 }
 
 @keyframes scale{
     50%{
-        transform: scale(1.5);
+        transform: scale(1.2);
     }
 }
 @keyframes rotate{

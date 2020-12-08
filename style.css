@@ -951,6 +951,47 @@ header h1{
     width: 50px;
 }
 
+/* CUSTOM INPUT FORM */
+.field-container{
+margin: 50px 0;
+}
+
+.field-input{
+    color: #000;
+    border: none;
+    background:transparent;
+    border-bottom:1px solid #424242;
+    width: 100%;
+    font-size: 16px;
+    padding: 5px;
+    display: block;
+    position: relative;
+}
+.field-input::before{
+    content:'Name';
+    position: absolute;
+    color: black;
+    font-size: 20px;
+}
+.field-input:focus{
+    outline: none;
+}
+.field-container label{
+    position: absolute;
+    /* top: 20px; */
+    /* z-index: 999; */
+    /* color: white; */
+    transform: translate(10px,-25px);
+    /* top: -25px; */
+    /* background-color: black; */
+    transition: 0.3s ease;
+}
+
+.field-input:focus ~ .field-placeholder{
+    transform: translate(0,-45px);
+    font-size: 14px;
+}
+
 /* =============== */
 /* =============== */
 /* Social Media Share */

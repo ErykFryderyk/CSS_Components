@@ -953,48 +953,70 @@ header h1{
 
 /* CUSTOM INPUT FORM */
 .field-container{
-margin: 50px 0;
+    max-width: 500px;
+    position: relative;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* background-color: red; */
 }
 
 .field-input{
-    color: #000;
-    border: none;
-    background:transparent;
-    border-bottom:1px solid #424242;
     width: 100%;
-    font-size: 16px;
-    padding: 5px;
-    display: block;
-    position: relative;
-}
-.field-input::before{
-    content:'Name';
-    position: absolute;
-    color: black;
-    font-size: 20px;
-}
-.field-input:focus{
+    height: 100%;
+    color: #fff;
+    padding-top: 20px;
+    border: none;
     outline: none;
+    background-color: transparent;
 }
-.field-container label{
+
+.field-placeholder{
     position: absolute;
-    /* top: 20px; */
-    /* z-index: 999; */
-    /* color: white; */
-    transform: translate(10px,-25px);
-    /* top: -25px; */
-    /* background-color: black; */
-    transition: 0.3s ease;
+    bottom:0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #e2e2e2;
 }
 
-.field-input:focus ~ .field-placeholder{
-    transform: translate(0,-45px);
+.field-placeholder::after{
+    content: '';
+    position: absolute;
+    left:0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 2px solid #4b7acf;
+    transform: translateX(-100%);
+    transition: transform .3s ease;
+}
+
+.placeholder-name{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.field-input:focus + .field-placeholder .placeholder-name,
+.field-input:valid + .field-placeholder .placeholder-name{
+    transform: translateY(-100%);
     font-size: 14px;
+    color:#4b7acf;
 }
 
-/* =============== */
+.field-input:focus + .field-placeholder::after,
+.field-input:valid+.field-placeholder::after {
+    transform: translateX(0%);
+}
+
+
 /* =============== */
 /* Social Media Share */
+/* =============== */
 
 @keyframes opacity-in {
     1% {

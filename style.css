@@ -421,7 +421,9 @@ header h1{
 /* Button #7 */
 .btn-7{
     position:relative;
-    padding: 10px 30px;
+    width: 200px;
+    height: 50px;
+    line-height: 0;
     display:inline-block;
     border:none;
     background: #262c37;
@@ -504,7 +506,9 @@ header h1{
 
 .btn-8 {
     position: relative;
-    padding: 10px 30px;
+    width: 200px;
+    height: 50px;
+    line-height: 0;
     display: inline-block;
     border: none;
     background: #262c37;
@@ -583,6 +587,49 @@ header h1{
     transform: scaleX(1);
     transform-origin: right;
     /* transition: transform 0.25s .75s; */
+}
+
+/* Button #9 */
+
+.btn-9{
+    width: 200px;
+    border: 1px solid white;
+    font-size: 18px;
+    height: 50px;
+    color: white;
+    overflow: hidden;
+    transition: border-color .2s ease;
+    outline:none;
+    line-height:0;
+}
+
+.btn-9--hover-bg{
+    position: absolute;
+    content: 'Click!';
+    width: 130%;
+    height: 110%;
+    background-color: black;
+    color:white;
+    top:-2px;
+    left: 0;
+    line-height: 50px;
+    transform-origin: center center;
+    transform: skew(-35deg) translateX(-110%);
+    transition: transform .2s ease;
+}
+.btn-9--text{
+    transform: skew(25deg);
+    display: block;
+}
+
+.btn-9:hover{
+    border-color: black;
+}
+.btn-9:hover .btn-9--hover-bg{
+    transform: skew(-35deg) translateX(-30px);
+}
+.btn-9:hover .btn-9--text{
+    transform: skew(35deg) translateX(-30px);
 }
 
 /* LOADING BUTTONS  */

@@ -24,9 +24,12 @@ btns.forEach(item =>{
 const btn7 = document.querySelector('.btn-click-1');
 
 btn7.addEventListener('click', function(e){
-    console.log('click');
-    let x = e.clientX - e.target.offsetLeft;
+    console.log(e.target.offsetLeft + ' ' + e.target.offsetTop);
+    
+    let x = e.clientX - e.target.offsetLeft; 
+    //Właściwość  clientX zapewnia współrzędną poziomą w obrębie elementu w którym doszło do zdarzenia
     let y = e.clientY - e.target.offsetTop;
+    //Właściwość  clientY zapewnia współrzędną pionową w obrębie elementu w którym doszło do zdarzenia 
     const ripple = document.createElement('span');
 
     ripple.style.left = `${x}px`;
@@ -35,7 +38,7 @@ btn7.addEventListener('click', function(e){
 
     setTimeout(function(){
         ripple.remove()
-    }, 600);
+    }, 300);
 
 });
 //Counter Animation 
@@ -115,7 +118,7 @@ const parallax = () => {
     text.style.top = value * 0.5 + 'px';
 }
 
-window.addEventListener('scroll', parallax)
+// window.addEventListener('scroll', parallax)
 
 
 //Generate Password 
@@ -166,3 +169,17 @@ socialLink.addEventListener('click', function(){
     socialLink.classList.toggle('active');
     shareLink.classList.toggle('active');
 })
+
+
+
+//RANGE SLICER 
+
+const slideValue = document.querySelector('.slide-value span');
+const inputSlider = document.querySelector('.slide-field input');
+
+inputSlider.addEventListener('input',()=>{
+    let value = inputSlider.value;
+    slideValue.textContent = value; 
+    slideValue.style.left = (value/2) + "%";
+    slideValue.classList.add('show');
+});

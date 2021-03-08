@@ -1457,6 +1457,7 @@ background-color: #545454;
     background-color: #fff;
     border-radius: 10px;
     padding: 0 65px 0 45px;
+    margin-bottom: 20px;
 }
 
 .range-wrapper .slide-field{
@@ -1528,6 +1529,53 @@ background-color: #545454;
     border: 3px solid #fff;
     border-radius: 50% 50% 0 50%;
     z-index: -1;
+}
+
+.range-image{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#slider{
+    width: 100%;
+    -webkit-appearance: none;
+    outline: none;
+    height: 7px;
+    border-radius: 3px;
+    background-color: goldenrod;
+}
+#slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 3;
+    position:relative;
+}
+
+#selector{
+    height: 104px;
+    width: 48px;
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.select-btn{
+    height: 32px;
+    width: 32px;
+    background-color: url('./img/double-arrow.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    background-color: black;
 }
 
 /*Parallax Hero Section */

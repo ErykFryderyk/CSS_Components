@@ -1569,13 +1569,49 @@ background-color: #545454;
 .select-btn{
     height: 32px;
     width: 32px;
-    background-color: url('./img/double-arrow.png');
-    background-size: cover;
+    background-image: url('./img/double-arrow.png');
+    background-size: contain;
     background-position: center;
     border-radius: 50%;
     position: absolute;
-    bottom: 0;
-    background-color: black;
+    bottom: 2px;
+    background-color: gray;
+    border: 5px solid rgb(61, 61, 61);
+}
+
+#select-value{
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    top: 17px;
+    transform: translateX(-3px);
+    background: #ffd200;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#select-value::after{
+    content: '';
+    position: absolute;
+    border-top:17px solid #ffd200;
+    border-left: 20px solid #fff;
+    border-right: 20px solid #fff;
+    bottom:-14px;
+    left:-1px;
+}
+
+#progress-bar{
+    width: 50%;
+    height: 7px;
+    background-color: gray;
+    border-radius: 3px;
+    position:absolute;
+    top: 37px;
+    left: 0;
+
 }
 
 /*Parallax Hero Section */

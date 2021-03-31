@@ -1323,6 +1323,9 @@ header h1{
 /* Social Media Share */
 /* =============== */
 
+/* Social Media #1 */
+
+
 @keyframes opacity-in {
     1% {
         opacity: 0;
@@ -1436,7 +1439,82 @@ i.exit {
     animation: opacity-in .2s ease-in .5s forwards;
 }
 
+/* Social Media #2 */
+
+.toggle{
+    width: 50px;
+    height: 50px;
+    background-color: #eb5858;
+    border-radius: 50%;
+    border: 2px solid #eb5858;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle::before{
+    content: '\f1e0';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    color: #fff;
+    font-family: fontAwesome;
+    text-align: center;
+    line-height: 50px;
+    font-size: 22px;
+}
+.share.active .toggle::before{
+    content: '\f00d';
+    font-size: 2rem;
+}
+
+.share{
+    position: relative;
+}
+.share ol {
+    list-style-type: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+.share ol li{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #fff;
+    transition: transform 0.4s;
+}
+.share ol li a {
+    color: black;
+}
+.share.active ol li{
+    transform: translate(0);
+}
+.share.active ol li:nth-child(1){
+    transform: translateX(60px);
+    transition-delay: 0.1s;
+}
+.share.active ol li:nth-child(2){
+    transform: translateY(60px);
+    transition-delay: 0.2s;
+}
+.share.active ol li:nth-child(3){
+    transform: translateX(-60px);
+    transition-delay: 0.3s;
+}
+.share.active ol li:nth-child(4){
+    transform: translateY(-60px);
+    transition-delay: 0.4s;
+}
+
+
+
+/* ----------------------- */
 /* Password Generator  */
+/* ----------------------- */
 
 .password-box{
     position: relative;

@@ -21,6 +21,12 @@ body {
     margin-left: auto;
     margin-bottom: 20px;
 }
+.wrapper {
+    background-color: #31b89d;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 @media (min-width: 768px) {
     .wrapper {
         background-color: #31b89d;
@@ -42,11 +48,7 @@ body {
     }
 }
 
-.wrapper {
-    background-color: #31b89d;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
+
 
 .box-element {
     display: flex;

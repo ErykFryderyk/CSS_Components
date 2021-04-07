@@ -4,14 +4,7 @@
 /* ------------------- */
 
 
-
-
-
-
-
-/* ------------------- */
 /* BUTTON 1*/
-/* ------------------- */
 
 .btn {
     border: none;
@@ -23,6 +16,7 @@
     background-color: transparent;
     position: relative;
     margin: 20px;
+    outline:none;
 }
 
 .btn-click-1 {
@@ -61,5 +55,439 @@
         width: 500px;
         height: 500px;
         opacity: 0;
+    }
+}
+
+/* ------------------- */
+/* BUTTONS HOVER EFFECT*/
+/* ------------------- */
+
+
+/* Button #1 */
+.btn-1 {
+    background: #fff;
+    color: #000;
+    border-radius: 30px;
+    transition: all .25s ease;
+
+    &::after, &::before{
+        content: '';
+        position: absolute;
+        opacity: .3;
+        background: #fff;
+        border-radius: inherit;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        bottom: 0px;
+        z-index: -1;
+        transition: all .25s ease;
+    }
+
+    &:hover{
+        transform: translate(12px, -12px);
+
+        &::after{
+            transform: translate(-6px, 6px);
+        }
+        &::before{
+            transform: translate(-12px, 12px);
+        }
+    }
+}
+
+/* Button #2 */
+
+.btn-2 {
+    position: relative;
+    color: #fff;
+
+    &::before, &::after{
+        content: '';
+        position: absolute;
+        border: 1px solid #fff;
+        border-radius: inherit;
+        width: calc(100% - 6px);
+        height: calc(100% - 6px);
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+        transition: transform .3s ease;
+    }
+
+    &:hover{
+
+        &::after{
+            transform: translate(-5px, -5px);
+        }
+        &::before{
+            transform: translate(5px, 5px);
+        }
+    }
+}
+
+/* Button #3 */
+
+.btn-3 {
+    background: transparent;
+    position: relative;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: color .3s ease;
+
+    &::after{
+        content: '';
+        position: absolute;
+        height: 5px;
+        width: 10%;
+        background-color: #fff;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+        transition: all .3s ease;
+    }
+
+    &:hover{
+        color: green;
+
+        &::after{
+            width: 100%;
+            background-color: green;
+        }
+    }
+}
+
+/* Button #4 */
+
+.btn-4 {
+    overflow: hidden;
+    color: #fff;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 0px rgba(143, 64, 248, .5), 0px 0px 0px 0px rgba(39, 200, 255, .5);
+    border: 1px solid #fff;
+
+    &::after{
+        content: '';
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        top: -50px;
+        left: -100px;
+        background-color: #FF3CAC;
+        background-image: linear-gradient(225deg, #27d86c 0%, #26caf8 50%, #c625d0 100%);
+        z-index: -1;
+        transition: all .5s ease;
+    }
+
+    &:hover{
+        transform: translate(0, -0px);
+        box-shadow: 10px -10px 25px 0px rgba(143, 64, 248, .25),
+        -10px 10px 25px 0 rgba(39, 200, 255, .25);
+        border: 0px;
+
+        &::after{
+            transform: rotate(150deg);
+        }
+    }
+}
+
+/* Button #5 */
+
+.btn-5 {
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 50px;
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        top: 0;
+        left: 0;
+        transform: scale(.1);
+        background-color: #000;
+        z-index: -1;
+        opacity: 0;
+        transition: all .25s ease;
+    }
+
+    &:hover{
+        color: #fff;
+        z-index: 1;
+
+        &::after{
+            transform: scale(1);
+            opacity:1;
+        }
+    }
+}
+
+/* Button #6 */
+
+.btn-6 {
+    border: 3px solid #fff;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    transform: skew(20deg);
+    position: relative;
+    overflow: hidden;
+    backface-visibility: hidden;
+    cursor: pointer;
+
+    .effect{
+        position: absolute;
+        background: green;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translate(0, -100%);
+        transition: all .25s ease;
+        backface-visibility: hidden;
+    }
+
+    span{
+        transform: skew(-20deg);
+        display: block;
+        transition: all .25s ease;
+
+        &:hover{
+            opacity: 0;
+            transform: scale(.5);
+        }
+    }
+
+    &:hover{
+
+        .effect{
+            transform: translate(0);
+        }
+    }
+}
+
+/* Button #7 */
+
+.btn-7 {
+    position: relative;
+    width: 200px;
+    height: 50px;
+    line-height: 0;
+    display: inline-block;
+    border: none;
+    background: #262c37;
+    color: #2894ff;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin: 10px;
+    text-transform: uppercase;
+
+    span{
+        position: absolute;
+        display: block;
+        background: #2894ff;
+
+        &:nth-child(1){
+            left:0;
+            bottom: 0;
+            width:2px;
+            height:100%;
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.25s;
+        }
+
+        &:nth-child(2) {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 2px;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.25s;
+        }
+        &:nth-child(3) {
+            bottom: 0;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.25s;
+        }
+        &:nth-child(4) {
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 2px;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.25s;
+        }
+    }
+    //CLASS BTN_7 HOVER
+    &:hover{
+
+        span{
+            &:nth-child(1){
+                transform: scaleY(1);
+                transform-origin: bottom;
+                transition: transform 0.25s;
+            }
+            &:nth-child(2) {
+                transform: scaleX(1);
+                transform-origin: left;
+                transition: transform 0.25s;
+            }
+            &:nth-child(3) {
+                transform: scaleY(1);
+                transform-origin: top;
+                transition: transform 0.25s;
+            }
+            &:nth-child(4) {
+                transform: scaleX(1);
+                transform-origin: right;
+                transition: transform 0.25s;
+            }
+        }
+    }
+}
+
+/* Button #8 */
+
+
+.btn-8 {
+    position: relative;
+    width: 200px;
+    height: 50px;
+    line-height: 0;
+    display: inline-block;
+    border: none;
+    background: #262c37;
+    color: #2894ff;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin: 10px;
+    text-transform: uppercase;
+
+    span {
+        position: absolute;
+        display: block;
+        background: #2894ff;
+
+        &:nth-child(1) {
+            left: 0;
+            bottom: 0;
+            width: 2px;
+            height: 100%;
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.1s;
+        }
+        &:nth-child(2) {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 2px;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.1s .1s;
+        }
+        &:nth-child(3) {
+            bottom: 0;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.1s .2s;
+        }
+        &:nth-child(4) {
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 2px;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.1s .3s;
+        }
+    }
+
+    &:hover{
+
+        span{
+            &:nth-child(1) {
+                transform: scaleY(1);
+                transform-origin: bottom;
+                /* transition: transform 0.25s; */
+            }
+            &:nth-child(2) {
+                transform: scaleX(1);
+                transform-origin: left;
+                /* transition: transform 0.25s 0.25s; */
+            }
+            &:nth-child(3) {
+                transform: scaleY(1);
+                transform-origin: top;
+                /* transition: transform 0.25s .5s; */
+            }
+            &:nth-child(4) {
+                transform: scaleX(1);
+                transform-origin: right;
+                /* transition: transform 0.25s .75s; */
+            }
+        }
+    }
+}
+
+/* Button #9 */
+
+.btn-9 {
+    width: 200px;
+    border: 1px solid white;
+    font-size: 18px;
+    height: 50px;
+    color: white;
+    overflow: hidden;
+    transition: border-color .2s ease;
+    outline: none;
+    line-height: 0;
+
+    .btn-9--hover-bg {
+        position: absolute;
+        content: 'Click!';
+        width: 130%;
+        height: 110%;
+        background-color: black;
+        color: white;
+        top: -2px;
+        left: 0;
+        line-height: 50px;
+        transform-origin: center center;
+        transform: skew(-35deg) translateX(-110%);
+        transition: transform .2s ease;
+    }
+
+    .btn-9--text {
+        transform: skew(25deg);
+        display: block;
+    }
+
+    &:hover{
+        border-color: black;
+
+        .btn-9--hover-bg{
+            transform: skew(-35deg) translateX(-30px);
+        }
+        .btn-9--text {
+            transform: skew(35deg) translateX(-30px);
+        }
     }
 }

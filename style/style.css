@@ -1,7 +1,690 @@
-.test-sass {
-  background-color: #fff;
-  width: 200px;
-  height: 200px; }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
 
 body {
-  background-color: black; }
+  font-family: 'Nunito', sans-serif;
+  background-color: #17A589;
+  font-weight: 300;
+  color: #2b2b2b;
+  scroll-snap-type: y proximity; }
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px; }
+
+.wrapper {
+  background-color: #31b89d;
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+
+@media (min-width: 768px) {
+  .wrapper {
+    background-color: #31b89d;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media (min-width: 1260px) {
+  .wrapper {
+    background-color: #31b89d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+  .container {
+    width: 1200px; } }
+
+.box-element {
+  display: flex;
+  justify-content: center;
+  min-width: 20%;
+  height: 200px;
+  align-items: center; }
+
+.box-element:nth-child(2n) {
+  background-color: #0c1549; }
+
+.box-element:first-child {
+  background-color: #C70039; }
+
+.box-element:nth-child(3) {
+  background-color: #f37121; }
+
+.box-element:nth-child(5) {
+  background-color: #ffbd69; }
+
+.box-element:nth-child(7) {
+  background-color: #5c6e91; }
+
+.box-element:nth-child(9) {
+  background-color: #ec5858; }
+
+header {
+  text-align: center;
+  padding: 30px 0; }
+
+header h1 {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 36px; }
+
+/* ------------------- */
+/* BUTTONS CLICK EFFECT*/
+/* ------------------- */
+/* BUTTON 1*/
+.btn {
+  border: none;
+  cursor: pointer;
+  box-shadow: none;
+  padding: 20px 50px;
+  font-size: 1.5rem;
+  border: 0;
+  background-color: transparent;
+  position: relative;
+  margin: 20px;
+  outline: none; }
+
+.btn-click-1 {
+  width: 180px;
+  height: 50px;
+  background: linear-gradient(90deg, #2d84e2, #55e7fc);
+  font-size: 20px;
+  border: none;
+  letter-spacing: 1px;
+  outline: none;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  border-radius: 15px; }
+
+.btn-click-1 > span {
+  position: absolute;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  height: 500px;
+  width: 500px;
+  animation: ripples .3s linear infinite; }
+
+@keyframes ripples {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: .5; }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0; } }
+
+/* ------------------- */
+/* BUTTONS HOVER EFFECT*/
+/* ------------------- */
+/* Button #1 */
+.btn-1 {
+  background: #fff;
+  color: #000;
+  border-radius: 30px;
+  transition: all .25s ease; }
+  .btn-1::after, .btn-1::before {
+    content: '';
+    position: absolute;
+    opacity: .3;
+    background: #fff;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    bottom: 0px;
+    z-index: -1;
+    transition: all .25s ease; }
+  .btn-1:hover {
+    transform: translate(12px, -12px); }
+    .btn-1:hover::after {
+      transform: translate(-6px, 6px); }
+    .btn-1:hover::before {
+      transform: translate(-12px, 12px); }
+
+/* Button #2 */
+.btn-2 {
+  position: relative;
+  color: #fff; }
+  .btn-2::before, .btn-2::after {
+    content: '';
+    position: absolute;
+    border: 1px solid #fff;
+    border-radius: inherit;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: transform .3s ease; }
+  .btn-2:hover::after {
+    transform: translate(-5px, -5px); }
+  .btn-2:hover::before {
+    transform: translate(5px, 5px); }
+
+/* Button #3 */
+.btn-3 {
+  background: transparent;
+  position: relative;
+  color: #fff;
+  border: 1px solid #fff;
+  transition: color .3s ease; }
+  .btn-3::after {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 10%;
+    background-color: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    transition: all .3s ease; }
+  .btn-3:hover {
+    color: green; }
+    .btn-3:hover::after {
+      width: 100%;
+      background-color: green; }
+
+/* Button #4 */
+.btn-4 {
+  overflow: hidden;
+  color: #fff;
+  border-radius: 30px;
+  box-shadow: 0px 0px 0px 0px rgba(143, 64, 248, 0.5), 0px 0px 0px 0px rgba(39, 200, 255, 0.5);
+  border: 1px solid #fff; }
+  .btn-4::after {
+    content: '';
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #27d86c 0%, #26caf8 50%, #c625d0 100%);
+    z-index: -1;
+    transition: all .5s ease; }
+  .btn-4:hover {
+    transform: translate(0, 0px);
+    box-shadow: 10px -10px 25px 0px rgba(143, 64, 248, 0.25), -10px 10px 25px 0 rgba(39, 200, 255, 0.25);
+    border: 0px; }
+    .btn-4:hover::after {
+      transform: rotate(150deg); }
+
+/* Button #5 */
+.btn-5 {
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 50px; }
+  .btn-5::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+    transform: scale(0.1);
+    background-color: #000;
+    z-index: -1;
+    opacity: 0;
+    transition: all .25s ease; }
+  .btn-5:hover {
+    color: #fff;
+    z-index: 1; }
+    .btn-5:hover::after {
+      transform: scale(1);
+      opacity: 1; }
+
+/* Button #6 */
+.btn-6 {
+  border: 3px solid #fff;
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  transform: skew(20deg);
+  position: relative;
+  overflow: hidden;
+  backface-visibility: hidden;
+  cursor: pointer; }
+  .btn-6 .effect {
+    position: absolute;
+    background: green;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0, -100%);
+    transition: all .25s ease;
+    backface-visibility: hidden; }
+  .btn-6 span {
+    transform: skew(-20deg);
+    display: block;
+    transition: all .25s ease; }
+    .btn-6 span:hover {
+      opacity: 0;
+      transform: scale(0.5); }
+  .btn-6:hover .effect {
+    transform: translate(0); }
+
+/* Button #7 */
+.btn-7 {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  line-height: 0;
+  display: inline-block;
+  border: none;
+  background: #262c37;
+  color: #2894ff;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin: 10px;
+  text-transform: uppercase; }
+  .btn-7 span {
+    position: absolute;
+    display: block;
+    background: #2894ff; }
+    .btn-7 span:nth-child(1) {
+      left: 0;
+      bottom: 0;
+      width: 2px;
+      height: 100%;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.25s; }
+    .btn-7 span:nth-child(2) {
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 2px;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.25s; }
+    .btn-7 span:nth-child(3) {
+      bottom: 0;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 0.25s; }
+    .btn-7 span:nth-child(4) {
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 2px;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s; }
+  .btn-7:hover span:nth-child(1) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.25s; }
+  .btn-7:hover span:nth-child(2) {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.25s; }
+  .btn-7:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform 0.25s; }
+  .btn-7:hover span:nth-child(4) {
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 0.25s; }
+
+/* Button #8 */
+.btn-8 {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  line-height: 0;
+  display: inline-block;
+  border: none;
+  background: #262c37;
+  color: #2894ff;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin: 10px;
+  text-transform: uppercase; }
+  .btn-8 span {
+    position: absolute;
+    display: block;
+    background: #2894ff; }
+    .btn-8 span:nth-child(1) {
+      left: 0;
+      bottom: 0;
+      width: 2px;
+      height: 100%;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.1s; }
+    .btn-8 span:nth-child(2) {
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 2px;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.1s .1s; }
+    .btn-8 span:nth-child(3) {
+      bottom: 0;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 0.1s .2s; }
+    .btn-8 span:nth-child(4) {
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 2px;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.1s .3s; }
+  .btn-8:hover span:nth-child(1) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    /* transition: transform 0.25s; */ }
+  .btn-8:hover span:nth-child(2) {
+    transform: scaleX(1);
+    transform-origin: left;
+    /* transition: transform 0.25s 0.25s; */ }
+  .btn-8:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: top;
+    /* transition: transform 0.25s .5s; */ }
+  .btn-8:hover span:nth-child(4) {
+    transform: scaleX(1);
+    transform-origin: right;
+    /* transition: transform 0.25s .75s; */ }
+
+/* Button #9 */
+.btn-9 {
+  width: 200px;
+  border: 1px solid white;
+  font-size: 18px;
+  height: 50px;
+  color: white;
+  overflow: hidden;
+  transition: border-color .2s ease;
+  outline: none;
+  line-height: 0; }
+  .btn-9 .btn-9--hover-bg {
+    position: absolute;
+    content: 'Click!';
+    width: 130%;
+    height: 110%;
+    background-color: black;
+    color: white;
+    top: -2px;
+    left: 0;
+    line-height: 50px;
+    transform-origin: center center;
+    transform: skew(-35deg) translateX(-110%);
+    transition: transform .2s ease; }
+  .btn-9 .btn-9--text {
+    transform: skew(25deg);
+    display: block; }
+  .btn-9:hover {
+    border-color: black; }
+    .btn-9:hover .btn-9--hover-bg {
+      transform: skew(-35deg) translateX(-30px); }
+    .btn-9:hover .btn-9--text {
+      transform: skew(35deg) translateX(-30px); }
+
+/* ============ */
+/*  LOADERS     */
+/* ============ */
+.loading-animation {
+  display: flex;
+  width: 80px;
+  flex-wrap: wrap;
+  animation: rotate 1.5s infinite linear; }
+  .loading-animation span {
+    background-color: black;
+    width: 32px;
+    height: 32px;
+    margin: 4px;
+    animation: scale 1.5s infinite linear; }
+    .loading-animation span:nth-child(1) {
+      background-color: #dbc373;
+      border-radius: 25px 25px 0 25px;
+      transform-origin: bottom right; }
+    .loading-animation span:nth-child(2) {
+      background-color: #5fac5f;
+      border-radius: 25px 25px 25px 0;
+      transform-origin: bottom left;
+      animation-delay: .3s; }
+    .loading-animation span:nth-child(3) {
+      background-color: #792a79;
+      border-radius: 25px 0 25px 25px;
+      transform-origin: top right;
+      animation-delay: .9s; }
+    .loading-animation span:nth-child(4) {
+      background-color: #3d89d1;
+      border-radius: 0px 25px 25px 25px;
+      transform-origin: top left;
+      animation-delay: .6s; }
+
+@keyframes scale {
+  50% {
+    transform: scale(1.2); } }
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg); } }
+
+/* LOADER #2 */
+.loading-animation-1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .loading-animation-1 span {
+    width: 10px;
+    height: 80px;
+    background: burlywood;
+    margin: 0 3px;
+    border-radius: 50px; }
+    .loading-animation-1 span:nth-child(5) {
+      background-color: #f35252;
+      animation: anim 1s infinite; }
+    .loading-animation-1 span:nth-child(4), .loading-animation-1 span:nth-child(6) {
+      background-color: #37eff5;
+      animation: anim 1s .1s infinite; }
+    .loading-animation-1 span:nth-child(3), .loading-animation-1 span:nth-child(7) {
+      background-color: #5af173;
+      animation: anim 1s .2s infinite; }
+    .loading-animation-1 span:nth-child(2), .loading-animation-1 span:nth-child(8) {
+      background-color: #e6fd62;
+      animation: anim 1s .3s infinite; }
+    .loading-animation-1 span:nth-child(1), .loading-animation-1 span:nth-child(9) {
+      background-color: #f79351;
+      animation: anim 1s .4s infinite; }
+
+@keyframes anim {
+  0%,
+  100% {
+    height: 30px; }
+  50% {
+    height: 80px; } }
+
+/* ------------------- */
+/* LOADING BUTTONS  */
+/* ------------------- */
+.loading-btn {
+  padding: 20px 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  position: relative;
+  margin: 20px;
+  transition: all .25s ease;
+  background: #8b3bec;
+  border-radius: 28px;
+  color: #fff;
+  overflow: hidden;
+  outline: none; }
+
+.loading-btn:active {
+  transform: scale(0.85); }
+
+.loading-btn.active-loading .loading {
+  visibility: visible;
+  opacity: 1; }
+
+.loading-btn .loading {
+  opacity: 0;
+  visibility: hidden; }
+
+/*Loading Button #1 */
+.loading-1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: inherit; }
+  .loading-1::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    width: 30px;
+    height: 30px;
+    border-left: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    animation: loading1 1s ease infinite; }
+  .loading-1::before {
+    z-index: 5;
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    border: 3px dashed #fff;
+    width: 30px;
+    height: 30px;
+    border-left: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    animation: loading1 1s linear infinite; }
+
+@keyframes loading1 {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+/* Loading Button #2 */
+.loading-2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(116, 23, 231, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: inherit;
+  overflow: hidden;
+  outline: none; }
+  .loading-2::after, .loading-2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: loading2 1s ease infinite;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.25); }
+
+@keyframes loading2 {
+  0% {
+    transform: translate(0, 100%); }
+  100% {
+    transform: translate(0, -100%); } }
+
+/* Loading Button #3*/
+.loading-3 {
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(116, 23, 231, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: inherit;
+  overflow: hidden; }
+  .loading-3::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    bottom: 0;
+    animation: loading3 1s ease infinite;
+    z-index: 10;
+    background: white;
+    border-radius: 10px; }
+
+@keyframes loading3 {
+  0% {
+    width: 0%; }
+  50% {
+    width: 100%; }
+  100% {
+    width: 100%;
+    opacity: 0; } }
+
+/* Loading Button #4 */
+.loading-4 {
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(116, 23, 231, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: inherit;
+  overflow: hidden; }
+  .loading-4::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    animation: loading4 1s ease infinite;
+    z-index: 10;
+    background: white;
+    border-radius: 10px; }
+
+@keyframes loading4 {
+  0% {
+    width: 0%; }
+  50% {
+    width: 100%; }
+  100% {
+    width: 100%;
+    opacity: 0; } }

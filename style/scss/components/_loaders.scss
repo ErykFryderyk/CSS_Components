@@ -1,0 +1,110 @@
+/* ============ */
+/*  LOADERS     */
+/* ============ */
+
+.loading-animation {
+    display: flex;
+    width: 80px;
+    flex-wrap: wrap;
+    animation: rotate 1.5s infinite linear;
+
+    span{
+        background-color: black;
+        width: 32px;
+        height: 32px;
+        margin: 4px;
+        animation: scale 1.5s infinite linear;       
+
+        &:nth-child(1) {
+            background-color: #dbc373;
+            border-radius: 25px 25px 0 25px;
+            transform-origin: bottom right;
+        }
+        &:nth-child(2) {
+            background-color: #5fac5f;
+            border-radius: 25px 25px 25px 0;
+            transform-origin: bottom left;
+            animation-delay: .3s;
+        }
+        &:nth-child(3) {
+            background-color: #792a79;
+            border-radius: 25px 0 25px 25px;
+            transform-origin: top right;
+            animation-delay: .9s;
+        }
+        &:nth-child(4) {
+            background-color: #3d89d1;
+            border-radius: 0px 25px 25px 25px;
+            transform-origin: top left;
+            animation-delay: .6s;
+        }
+    }
+}
+
+@keyframes scale {
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* LOADER #2 */
+
+.loading-animation-1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span{
+        width: 10px;
+        height: 80px;
+        background: burlywood;
+        margin: 0 3px;
+        border-radius: 50px;
+
+        &:nth-child(5) {
+            background-color: #f35252;
+            animation: anim 1s infinite;
+        }
+        &:nth-child(4),
+        &:nth-child(6) {
+            background-color: #37eff5;
+            animation: anim 1s .1s infinite;
+        }
+        &:nth-child(3),
+        &:nth-child(7) {
+            background-color: rgb(90, 241, 115);
+            animation: anim 1s .2s infinite;
+        }
+        &:nth-child(2),
+        &:nth-child(8) {
+            background-color: #e6fd62;
+            animation: anim 1s .3s infinite;
+        }
+        &:nth-child(1),
+        &:nth-child(9) {
+            background-color: rgb(247, 147, 81);
+            animation: anim 1s .4s infinite;
+        }
+    }
+}
+
+@keyframes anim {
+
+    0%,
+    100% {
+        height: 30px;
+    }
+
+    50% {
+        height: 80px;
+    }
+}

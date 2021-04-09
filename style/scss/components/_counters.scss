@@ -1,0 +1,25 @@
+.counter-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px 0;
+
+    .counter-container {
+        text-align: center;
+    }
+
+    .count {
+        display: block;
+        margin-bottom: 20px;
+        font-size: 80px;
+        color: #6a097d;
+        margin: 0px 50px;
+    }
+    
+    .count-detail {
+        font-size: 25px;
+        white-space: nowrap;
+    }
+}
+
+

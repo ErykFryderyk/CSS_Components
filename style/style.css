@@ -910,3 +910,120 @@ header h1 {
 
 .checkbox-4:checked ~ .circle::before {
   background: red; }
+
+/* Form Section  */
+/* show password element */
+.box-of-form-elements {
+  display: flex;
+  flex-wrap: wrap; }
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  font-size: 30px; }
+
+.form-box input {
+  height: 50px;
+  font-size: 22px;
+  border: none;
+  border-radius: 25px;
+  padding-left: 15px; }
+
+.form-box #myCheckBox {
+  height: 50px;
+  width: 50px; }
+
+/* Password Generator  */
+.password-box {
+  position: relative; }
+  .password-box input {
+    font-size: 16px;
+    color: #f9f9f9;
+    background: transparent;
+    padding: .5rem 1rem;
+    min-width: 24rem;
+    border-radius: 0.2rem;
+    border: 2px solid #20202056;
+    transition: border-color 0.2s;
+    margin-top: 20px; }
+    .password-box input::selection {
+      background: #7a7a7a56; }
+
+label input:not(:placeholder-shown) {
+  border-color: #ff4754; }
+
+label input:not(:placeholder-shown) + p {
+  top: 0;
+  font-size: 0.9rem;
+  border-color: #ff4754; }
+
+label input:placeholder-shown + p {
+  color: #7a7a7a56; }
+
+.password-box-btn {
+  font-size: 1rem;
+  user-select: none;
+  margin-top: 1.2rem;
+  padding: 1rem 1.2rem;
+  min-width: 24rem;
+  border-radius: 0.2rem;
+  background: #ff4754;
+  color: #040404;
+  transition: opacity 0.2s;
+  cursor: pointer;
+  opacity: .6; }
+
+/* CUSTOM INPUT FORM */
+.field-container {
+  max-width: 500px;
+  position: relative;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  /* background-color: red; */ }
+
+.field-input {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+  background-color: transparent; }
+
+.field-placeholder {
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #e2e2e2; }
+
+.field-placeholder::after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 2px solid #4b7acf;
+  transform: translateX(-100%);
+  transition: transform .3s ease; }
+
+.placeholder-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  transition: all 0.3s ease; }
+
+.field-input:focus + .field-placeholder .placeholder-name,
+.field-input:valid + .field-placeholder .placeholder-name {
+  transform: translateY(-100%);
+  font-size: 14px;
+  color: #ffffff; }
+
+.field-input:focus + .field-placeholder::after,
+.field-input:valid + .field-placeholder::after {
+  transform: translateX(0%); }

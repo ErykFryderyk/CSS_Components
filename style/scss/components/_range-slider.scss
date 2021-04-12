@@ -1,0 +1,172 @@
+/* ------------------- */
+/* RANGE SLIDER   */
+/* ------------------- */
+
+.range-wrapper {
+    height: 80px;
+    width: 380px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0 65px 0 45px;
+    margin-bottom: 20px;
+}
+
+.range-wrapper .slide-field {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.range-wrapper .slide-field .value {
+    position: absolute;
+    font-size: 18px;
+    font-weight: 600;
+    color: #664AFF;
+}
+
+.range-wrapper .slide-field .left {
+    left: -22px;
+}
+
+.range-wrapper .slide-field .right {
+    right: -43px;
+}
+
+.range-wrapper .slide-field input {
+    -webkit-appearance: none;
+    height: 3px;
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+.range-wrapper .slide-field input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background: #664AFF;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.range-wrapper .slide-value {
+    position: relative;
+}
+
+.range-wrapper .slide-value span {
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    color: #fff;
+    font-weight: 500;
+    top: -40px;
+    transform: translateX(-50%) scale(1);
+    line-height: 55px;
+    transform-origin: bottom;
+    transition: transform .3s ease-in-out;
+    z-index: 2;
+}
+
+.range-wrapper .slide-value span:after {
+    position: absolute;
+    content: "";
+    height: 45px;
+    width: 45px;
+    left: 50%;
+    background: #664AFF;
+    transform: translateX(-50%) rotate(45deg);
+    border: 3px solid #fff;
+    border-radius: 50% 50% 0 50%;
+    z-index: -1;
+}
+
+.range-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+/* RANGE SLIDER #2 */
+
+#slider {
+    width: 100%;
+    -webkit-appearance: none;
+    outline: none;
+    height: 7px;
+    border-radius: 3px;
+    background-color: goldenrod;
+}
+
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+}
+
+#selector {
+    height: 104px;
+    width: 48px;
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.select-btn {
+    height: 32px;
+    width: 32px;
+    background-image: url('./img/double-arrow.png');
+    background-size: contain;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 2px;
+    background-color: gray;
+    border: 5px solid rgb(61, 61, 61);
+}
+
+#select-value {
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    top: 17px;
+    transform: translateX(-3px);
+    background: #ffd200;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#select-value::after {
+    content: '';
+    position: absolute;
+    border-top: 17px solid #ffd200;
+    border-left: 20px solid #fff;
+    border-right: 20px solid #fff;
+    bottom: -14px;
+    left: -1px;
+}
+
+#progress-bar {
+    width: 50%;
+    height: 7px;
+    background-color: gray;
+    border-radius: 3px;
+    position: absolute;
+    top: 37px;
+    left: 0;
+}

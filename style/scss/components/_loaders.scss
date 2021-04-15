@@ -127,27 +127,27 @@
 
         &:nth-child(1){
             background-color: #f35252;
-            animation: spn1 1.2s linear infinite;
+            animation: spn-anime 1.2s linear infinite;
             z-index: 1;
         }
         &:nth-child(2){
             background-color: #37eff5;
-            animation: spn1 1.2s .1s linear infinite;
+            animation: spn-anime 1.2s .1s linear infinite;
             z-index: 1;
         }
         &:nth-child(3){
             background-color: #e6fd62;
-            animation: spn1 1.2s .2s linear infinite;
+            animation: spn-anime 1.2s .2s linear infinite;
         }
         &:nth-child(4){
             background-color: rgb(247, 147, 81);
-            animation: spn1 1.2s .3s linear infinite;
+            animation: spn-anime 1.2s .3s linear infinite;
         }
         
     }
 }
 
-@keyframes spn1{
+@keyframes spn-anime{
     0%{
         transform: translateX(-80px);
     }50%{
@@ -168,34 +168,96 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: anim 2s linear infinite;
+    @keyframes anim {
+        0%{
+            transform: rotate(0deg);
+        }
+        50%{
+            transform: rotate(180deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
 
     span {
         position: absolute;
         width: 20px;
         height: 20px;
-        // background: linear-gradient(45deg, #8a2e3d, #e9788b, #7a1022);
+        background: linear-gradient(45deg, #8a2e3d, #e9788b, #7a1022);
         border-radius: 50%;
 
         &:nth-child(1) {
-            background-color: #f35252;
             animation: spn1 1s linear infinite;
-            z-index: 1;
+
+            @keyframes spn1 {
+                0% {
+                    transform: translateX(0px);
+                }
+
+                50% {
+                    transform: translateX(50px);
+                }
+
+                100% {
+                    transform: translateX(0px);
+                }
+            }
         }
 
         &:nth-child(2) {
-            background-color: #37eff5;
-            animation: spn1 1s .1s linear infinite;
-            z-index: 1;
+            animation: spn2 1s linear infinite;
+
+            @keyframes spn2 {
+                0% {
+                    transform: translateX(0px);
+                }
+
+                50% {
+                    transform: translateX(-50px);
+                }
+
+                100% {
+                    transform: translateX(0px);
+                }
+            }
         }
 
         &:nth-child(3) {
-            background-color: #e6fd62;
-            animation: spn1 1s .2s linear infinite;
+            animation: spn3 1s linear infinite;
+
+            @keyframes spn3 {
+                0% {
+                    transform: translateY(0px);
+                }
+
+                50% {
+                    transform: translateY(50px);
+                }
+
+                100% {
+                    transform: translateY(0px);
+                }
+            }
         }
 
         &:nth-child(4) {
-            background-color: rgb(247, 147, 81);
-            animation: spn1 1s .3s linear infinite;
+            animation: spn4 1s linear infinite;
+
+            @keyframes spn4 {
+                0% {
+                    transform: translateY(0px);
+                }
+
+                50% {
+                    transform: translateY(-50px);
+                }
+
+                100% {
+                    transform: translateY(0px);
+                }
+            }
         }
 
     }

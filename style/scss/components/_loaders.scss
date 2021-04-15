@@ -2,7 +2,7 @@
 /*  LOADERS     */
 /* ============ */
 
-.loading-animation {
+.loading-animation-1 {
     display: flex;
     width: 80px;
     flex-wrap: wrap;
@@ -56,7 +56,7 @@
 
 /* LOADER #2 */
 
-.loading-animation-1 {
+.loading-animation-2 {
     width: 100%;
     height: 100%;
     display: flex;
@@ -112,7 +112,7 @@
 
 /* LOADER #3 */
 
-.loading-animation-2{
+.loading-animation-3{
     width: 80px;
     height: 80px;
     display: flex;
@@ -122,19 +122,25 @@
         position: absolute;
         width: 20px;
         height: 20px;
-        background: linear-gradient(45deg, #6d1625, #e9788b, #7a1022);
+        // background: linear-gradient(45deg, #8a2e3d, #e9788b, #7a1022);
         border-radius: 50%;
 
         &:nth-child(1){
+            background-color: #f35252;
             animation: spn1 1s linear infinite;
+            z-index: 1;
         }
         &:nth-child(2){
+            background-color: #37eff5;
             animation: spn1 1s .1s linear infinite;
+            z-index: 1;
         }
         &:nth-child(3){
+            background-color: #e6fd62;
             animation: spn1 1s .2s linear infinite;
         }
         &:nth-child(4){
+            background-color: rgb(247, 147, 81);
             animation: spn1 1s .3s linear infinite;
         }
         

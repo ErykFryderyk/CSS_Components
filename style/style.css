@@ -451,32 +451,32 @@ header h1 {
 /* ============ */
 /*  LOADERS     */
 /* ============ */
-.loading-animation {
+.loading-animation-1 {
   display: flex;
   width: 80px;
   flex-wrap: wrap;
   animation: rotate 1.5s infinite linear; }
-  .loading-animation span {
+  .loading-animation-1 span {
     background-color: black;
     width: 32px;
     height: 32px;
     margin: 4px;
     animation: scale 1.5s infinite linear; }
-    .loading-animation span:nth-child(1) {
+    .loading-animation-1 span:nth-child(1) {
       background-color: #dbc373;
       border-radius: 25px 25px 0 25px;
       transform-origin: bottom right; }
-    .loading-animation span:nth-child(2) {
+    .loading-animation-1 span:nth-child(2) {
       background-color: #5fac5f;
       border-radius: 25px 25px 25px 0;
       transform-origin: bottom left;
       animation-delay: .3s; }
-    .loading-animation span:nth-child(3) {
+    .loading-animation-1 span:nth-child(3) {
       background-color: #792a79;
       border-radius: 25px 0 25px 25px;
       transform-origin: top right;
       animation-delay: .9s; }
-    .loading-animation span:nth-child(4) {
+    .loading-animation-1 span:nth-child(4) {
       background-color: #3d89d1;
       border-radius: 0px 25px 25px 25px;
       transform-origin: top left;
@@ -491,31 +491,31 @@ header h1 {
     transform: rotate(360deg); } }
 
 /* LOADER #2 */
-.loading-animation-1 {
+.loading-animation-2 {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center; }
-  .loading-animation-1 span {
+  .loading-animation-2 span {
     width: 10px;
     height: 80px;
     background: burlywood;
     margin: 0 3px;
     border-radius: 50px; }
-    .loading-animation-1 span:nth-child(5) {
+    .loading-animation-2 span:nth-child(5) {
       background-color: #f35252;
       animation: anim 1s infinite; }
-    .loading-animation-1 span:nth-child(4), .loading-animation-1 span:nth-child(6) {
+    .loading-animation-2 span:nth-child(4), .loading-animation-2 span:nth-child(6) {
       background-color: #37eff5;
       animation: anim 1s .1s infinite; }
-    .loading-animation-1 span:nth-child(3), .loading-animation-1 span:nth-child(7) {
+    .loading-animation-2 span:nth-child(3), .loading-animation-2 span:nth-child(7) {
       background-color: #5af173;
       animation: anim 1s .2s infinite; }
-    .loading-animation-1 span:nth-child(2), .loading-animation-1 span:nth-child(8) {
+    .loading-animation-2 span:nth-child(2), .loading-animation-2 span:nth-child(8) {
       background-color: #e6fd62;
       animation: anim 1s .3s infinite; }
-    .loading-animation-1 span:nth-child(1), .loading-animation-1 span:nth-child(9) {
+    .loading-animation-2 span:nth-child(1), .loading-animation-2 span:nth-child(9) {
       background-color: #f79351;
       animation: anim 1s .4s infinite; }
 
@@ -525,6 +525,104 @@ header h1 {
     height: 30px; }
   50% {
     height: 80px; } }
+
+/* LOADER #3 */
+.loading-animation-3 {
+  width: 150px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .loading-animation-3 span {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; }
+    .loading-animation-3 span:nth-child(1) {
+      background-color: #f35252;
+      animation: spn-anime 1.2s linear infinite;
+      z-index: 1; }
+    .loading-animation-3 span:nth-child(2) {
+      background-color: #37eff5;
+      animation: spn-anime 1.2s .1s linear infinite;
+      z-index: 1; }
+    .loading-animation-3 span:nth-child(3) {
+      background-color: #e6fd62;
+      animation: spn-anime 1.2s .2s linear infinite; }
+    .loading-animation-3 span:nth-child(4) {
+      background-color: #f79351;
+      animation: spn-anime 1.2s .3s linear infinite; }
+
+@keyframes spn-anime {
+  0% {
+    transform: translateX(-80px); }
+  50% {
+    transform: translateX(80px); }
+  100% {
+    transform: translateX(-80px); } }
+
+/* LOADER #4 */
+.loading-animation-4 {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: anime 1.5s linear infinite; }
+
+@keyframes anime {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(360deg); } }
+  .loading-animation-4 span {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, #8a2e3d, #e9788b, #7a1022);
+    border-radius: 50%; }
+    .loading-animation-4 span:nth-child(1) {
+      animation: spn1 1s linear infinite; }
+
+@keyframes spn1 {
+  0% {
+    transform: translateX(0px); }
+  50% {
+    transform: translateX(50px); }
+  100% {
+    transform: translateX(0px); } }
+    .loading-animation-4 span:nth-child(2) {
+      animation: spn2 1s linear infinite; }
+
+@keyframes spn2 {
+  0% {
+    transform: translateX(0px); }
+  50% {
+    transform: translateX(-50px); }
+  100% {
+    transform: translateX(0px); } }
+    .loading-animation-4 span:nth-child(3) {
+      animation: spn3 1s linear infinite; }
+
+@keyframes spn3 {
+  0% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(50px); }
+  100% {
+    transform: translateY(0px); } }
+    .loading-animation-4 span:nth-child(4) {
+      animation: spn4 1s linear infinite; }
+
+@keyframes spn4 {
+  0% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(-50px); }
+  100% {
+    transform: translateY(0px); } }
 
 /* ------------------- */
 /* LOADING BUTTONS  */
